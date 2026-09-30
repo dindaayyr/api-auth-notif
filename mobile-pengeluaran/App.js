@@ -1368,10 +1368,11 @@ export default function App() {
               </Text>
             </TouchableOpacity>
 
+
             <TouchableOpacity
               style={styles.daftarHapusButton}
               activeOpacity={0.8}
-              onPress={ambilData}
+              onPress={() => setScreen('daftarKosong')}
             >
               <Text style={styles.primaryButtonText}>
                 Muat Ulang
@@ -1552,7 +1553,10 @@ export default function App() {
             </TouchableOpacity>
           </View>
 
-          <View style={styles.screen14Overlay}>
+          <View
+            style={styles.screen14Overlay}
+            pointerEvents="box-none"
+          >
             <View style={styles.screen14Card}>
               <Text style={styles.screen14Icon}>
                 ⚠️
@@ -1681,11 +1685,11 @@ const styles = StyleSheet.create({
   },
 
   page: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    marginHorizontal: 6,
-    position: 'relative',
-  },
+  flex: 1,
+  backgroundColor: '#FFFFFF',
+  marginHorizontal: 0,
+  position: 'relative',
+},
 
   // ==================================================
   // 01 & 07
@@ -2243,42 +2247,46 @@ const styles = StyleSheet.create({
   // ==================================================
 
   screen13Background: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 10,
-    paddingTop: 45,
-  },
+  flex: 1,
+  backgroundColor: '#F8FAFC',
+  paddingHorizontal: 20,
+  paddingTop: 30,
+},
 
-  screen13Title: {
-    fontSize: 15,
-    fontWeight: '700',
-    color: '#0F172A',
-    marginBottom: 13,
-  },
+screen13Title: {
+  fontSize: 15,
+  fontWeight: '700',
+  color: '#0F172A',
+  marginBottom: 13,
+},
 
-  screen13Button: {
-    height: 30,
-    width: '95%',
-    alignSelf: 'center',
-    backgroundColor: '#0F766E',
-    borderRadius: 6,
-    justifyContent: 'center',
-    paddingHorizontal: 12,
-    marginBottom: 10,
-  },
+screen13Button: {
+  height: 30,
+  width: '95%',
+  alignSelf: 'center',
+  backgroundColor: '#0F766E',
+  borderRadius: 6,
+  justifyContent: 'center',
+  paddingHorizontal: 12,
+  marginBottom: 10,
+},
 
-  screen13ButtonText: {
-    color: '#FFFFFF',
-    fontSize: 12,
-    fontWeight: '700',
-  },
+screen13ButtonText: {
+  color: '#FFFFFF',
+  fontSize: 12,
+  fontWeight: '700',
+},
 
   screen13Overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
 
   screen13Card: {
     width: '82%',
@@ -2330,11 +2338,11 @@ const styles = StyleSheet.create({
   // ==================================================
 
   screen14Background: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 10,
-    paddingTop: 45,
-  },
+  flex: 1,
+  backgroundColor: '#F8FAFC',
+  paddingHorizontal: 20,
+  paddingTop: 30,
+},
 
   screen14Title: {
     fontSize: 15,
@@ -2361,11 +2369,15 @@ const styles = StyleSheet.create({
   },
 
   screen14Overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
 
   screen14Card: {
     width: '82%',
@@ -2417,11 +2429,11 @@ const styles = StyleSheet.create({
   // ==================================================
 
   screen15Background: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    paddingHorizontal: 10,
-    paddingTop: 45,
-  },
+  flex: 1,
+  backgroundColor: '#F8FAFC',
+  paddingHorizontal: 20,
+  paddingTop: 30,
+},
 
   screen15Title: {
     fontSize: 15,
@@ -2448,11 +2460,15 @@ const styles = StyleSheet.create({
   },
 
   screen15Overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
 
   screen15Card: {
     width: '82%',
