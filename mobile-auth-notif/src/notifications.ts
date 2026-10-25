@@ -55,13 +55,17 @@ export async function setupPushNotifications(jwt: string) {
 
     const expoPushToken = tokenResponse.data;
 
-    await registerPushToken(expoPushToken, jwt);
+console.log('Expo Push Token:', expoPushToken);
+console.log('JWT tersedia:', !!jwt);
 
-    console.log('Expo Push Token berhasil didaftarkan.');
+const result = await registerPushToken(expoPushToken, jwt);
+
+console.log('Respons backend:', result);
+console.log('Expo Push Token berhasil didaftarkan.');
   } catch (error) {
-    console.warn(
-      'Registrasi push notification gagal:',
-      error
-    );
-  }
+  console.warn(
+    'Registrasi push notification gagal:',
+    error
+  );
+}
 }
